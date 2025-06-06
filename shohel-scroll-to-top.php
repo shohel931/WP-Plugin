@@ -74,10 +74,4 @@ function my_custom_menu_page_callback() {
 
 
 
-
-
-
-
-
-
 ?>
