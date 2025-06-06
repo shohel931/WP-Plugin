@@ -115,11 +115,11 @@ add_action('customize_register', 'shstotop_scroll_customize');
 function shstotop_customize_css() {
     ?>
     <style type="text/css">
-        .scrollup {
+        #scrollUp {
             background-color: <?php echo get_theme_mod('shstotop_scroll_bg_color', '#000'); ?>;
             border-radius: <?php echo get_theme_mod('shstotop_scroll_bd_redius', '5px'); ?>;
         }
-        .scrollup:hover {
+        #scrollUp:hover {
             background-color: <?php echo get_theme_mod('shstotop_scroll_bghover_color', '#262626'); ?>;
         }
     </style>
