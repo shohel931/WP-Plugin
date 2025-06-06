@@ -72,6 +72,29 @@ function my_custom_menu_page_callback() {
 }
 
 
+// Customize 
+function shstotop_scroll_customize($wp_customize){
+    $wp_customize-> add_section('shstotop_scroll_section', array(
+        'title' => __('Scroll To Top', 'shstotop'),
+        'priority' => 10,
+    ));
+    $wp_customize-> add_setting('shstotop_scroll_bg_color', array(
+        'default' => '#000',
+        'transport' => 'refresh',
+    ));
+    $wp_customize-> add_control(new WP_Customize_Color_Control($wp_customize, 'shstotop_scroll_bg_color', array(
+        'label' => __('Background Color', 'shstotop'),
+        'setting' => 'shstotop_scroll_bg_color',
+        'section' => 'shstotop_scroll_section',
+    )));
+    
+
+}
+add_action('customize_register', 'shstotop_scroll_customize');
+
+
+
+
 
 
 ?>
