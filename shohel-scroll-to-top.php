@@ -104,5 +104,4 @@ function shstotop_customize_css() {
 add_action('wp_head', 'shstotop_customize_css');
 
 
-
 ?>

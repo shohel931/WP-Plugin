@@ -4,7 +4,7 @@ Donate link: https://buymeacoffee.com/shohelrana
 Author URI: https://shohelrana.top/
 Plugin URI: https://wordpress.org/plugins/shohel-scroll-to-top
 Tags: scroll to top, back to top, smooth scroll, button, UX, shohel scroll to top
-Requires at least: 5.0
+Requires at least: 5.8
 Tested up to: 6.8.1
 Requires PHP: 7.0
 Stable tag: 1.0.0
