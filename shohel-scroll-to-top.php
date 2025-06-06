@@ -48,30 +48,6 @@ add_action('wp_footer', 'shstotop_scroll_scripts');
 
 
 
-
-
-
-// Main menu 
-function my_custom_admin_menu() {
-    // Main Menu
-    add_menu_page(
-        'Scroll To Top',              // Page title
-        'Scroll To Top',              // Menu title (sidebar e dekha jabe)
-        'manage_options',              // Capability
-        'my-custom-page-slug',         // Menu slug
-        'my_custom_menu_page_callback',// Function to show content
-        'dashicons-admin-generic',       // Icon (WordPress default icon)
-        30                              // Position
-    );
-}
-add_action('admin_menu', 'my_custom_admin_menu');
-
-// Callback for main menu
-function my_custom_menu_page_callback() {
-    echo '<div class="wrap"><h1>Scroll To Top </h1><p>Welcome to our Scroll To Top</p></div>';
-}
-
-
 // Customize 
 function shstotop_scroll_customize($wp_customize){
     $wp_customize-> add_section('shstotop_scroll_section', array(
