@@ -87,13 +87,45 @@ function shstotop_scroll_customize($wp_customize){
         'setting' => 'shstotop_scroll_bg_color',
         'section' => 'shstotop_scroll_section',
     )));
+     $wp_customize-> add_setting('shstotop_scroll_bghover_color', array(
+        'default' => '#262626',
+        'transport' => 'refresh',
+    ));
+    $wp_customize-> add_control(new WP_Customize_Color_Control($wp_customize, 'shstotop_scroll_bghover_color', array(
+        'label' => __('Hover', 'shstotop'),
+        'setting' => 'shstotop_scroll_bghover_color',
+        'section' => 'shstotop_scroll_section',
+    )));
+     $wp_customize-> add_setting('shstotop_scroll_bd_redius', array(
+        'default' => '5px',
+        'transport' => 'refresh',
+    ));
+    $wp_customize-> add_control('shstotop_scroll_bd_redius', array(
+        'label' => __('Border Redius', 'shstotop'),
+        'setting' => 'shstotop_scroll_bghover_color',
+        'section' => 'shstotop_scroll_section',
+        'type' => 'text',
+    ));
     
 
 }
 add_action('customize_register', 'shstotop_scroll_customize');
 
 
-
+function shstotop_customize_css() {
+    ?>
+    <style type="text/css">
+        .scrollup {
+            background-color: <?php echo get_theme_mod('shstotop_scroll_bg_color', '#000'); ?>;
+            border-radius: <?php echo get_theme_mod('shstotop_scroll_bd_redius', '5px'); ?>;
+        }
+        .scrollup:hover {
+            background-color: <?php echo get_theme_mod('shstotop_scroll_bghover_color', '#262626'); ?>;
+        }
+    </style>
+    <?php
+}
+add_action('wp_head', 'shstotop_customize_css');
 
 
 
