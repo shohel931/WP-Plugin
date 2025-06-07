@@ -73,7 +73,7 @@ function shohel_scroll_to_top_scroll_customize($wp_customize){
         'section' => 'shohel_scroll_to_top_scroll_section',
     )));
      $wp_customize-> add_setting('shohel_scroll_to_top_scroll_bd_redius', array(
-        'default' => '5px',
+        'default' => '25px',
         'transport' => 'refresh',
     ));
     $wp_customize-> add_control('shohel_scroll_to_top_scroll_bd_redius', array(
@@ -93,7 +93,7 @@ function shohel_scroll_to_top_customize_css() {
     <style type="text/css">
         #scrollUp {
             background-color: <?php echo get_theme_mod('shohel_scroll_to_top_scroll_bg_color', '#000'); ?>;
-            border-radius: <?php echo get_theme_mod('shohel_scroll_to_top_scroll_bd_redius', '5px'); ?>;
+            border-radius: <?php echo get_theme_mod('shohel_scroll_to_top_scroll_bd_redius', '25px'); ?>;
         }
         #scrollUp:hover {
             background-color: <?php echo get_theme_mod('shohel_scroll_to_top_scroll_bghover_color', '#262626'); ?>;
