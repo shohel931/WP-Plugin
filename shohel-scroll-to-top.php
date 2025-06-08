@@ -47,6 +47,43 @@ add_action('wp_footer', 'shohel_scroll_to_top_scroll_scripts');
 
 
 
+// Option Page
+function shohel_scroll_to_top_add_admin_menu() {
+    add_menu_page(
+        'Shohel Scroll To Top',
+        'Scroll To Top',
+        'manage_options',
+        'shohel_scroll_to_top',
+        'shohel_scroll_to_top_options_page',
+        'dashicons-arrow-up-alt2',
+        101
+    );
+}
+add_action('admin_menu', 'shohel_scroll_to_top_add_admin_menu');
+
+
+// Callback function for the options page
+function shohel_scroll_to_top_options_page() {
+    ?>
+
+
+
+
+   <?php
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Customize 
 function shohel_scroll_to_top_scroll_customize($wp_customize){
