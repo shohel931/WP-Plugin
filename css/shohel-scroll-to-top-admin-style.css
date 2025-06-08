@@ -1,0 +1,21 @@
+.shohel_scroll_to_top_main{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+
+}
+.shohel_scroll_to_top_body_area{
+    width: 50%;
+    position: relative;
+    background: #f9f9f9;
+    margin: 0 20px 0 0;
+}
+.shohel_scroll_to_top_sidebar{
+    width: 25%;
+    position: relative;
+
+}
+.shohel_scroll_to_top_sidebar{
+    width: 40%;
+    background:  #f9f9f9;
+}

@@ -30,6 +30,13 @@ function shohel_scroll_to_top_enqueue_scripts(){
 add_action('wp_enqueue_scripts', 'shohel_scroll_to_top_enqueue_scripts');
 
 
+// Including css
+function shohel_scroll_to_top_enqueue_admin_styles() {
+    wp_enqueue_style( 'shohel-scroll-to-top-admin-style', plugins_url( 'css/shohel-scroll-to-top-admin-style.css', __FILE__ ) );
+}
+add_action('admin_enqueue_scripts', 'shohel_scroll_to_top_enqueue_admin_styles');
+
+
 // jQuery plugin activition 
 function shohel_scroll_to_top_scroll_scripts(){
     ?>
@@ -74,9 +81,45 @@ function shohel_scroll_to_top_options_page() {
                 <?php wp_nonce_field('update-options');?>
 
                 <!-- Primary Color  -->
+                 <label for="shohel-scroll-to-top-color" name="shohel-scroll-to-top-color"><?php print esc_attr('Primary Color'); ?></label>
+                 <input type="color" name="shohel-scroll-to-top-color" value="<?php print get_option('shohel-scroll-to-top-color'); ?>">
+
+
+                <!-- Hover Color  -->
+                 <label for="shohel-scroll-to-top-hover-color" name="shohel-scroll-to-top-hover-color"><?php print esc_attr('Hover Color'); ?></label>
+                 <input type="color" name="shohel-scroll-to-top-hover-color" value="<?php print get_option('shohel-scroll-to-top-hover-color'); ?>">
+
+                 <!-- Button Position  -->
+                  <label for="shohel-scroll-to-top-button-position"><?php print esc_attr(__('Button Position')); ?></label>
+                  <select name="shohel-scroll-to-top-button-position" id="shohel-scroll-to-top-button-position">
+                    <option value="true" <?php if(get_option('shohel-scroll-to-top-button-position')== 'true'){echo 'selected="selected"';} ?>>Left</option>
+                    <option value="false" <?php if(get_option('shohel-scroll-to-top-button-position')== 'false'){echo 'selected="selected"';} ?>>Right</option>
+                  </select>
+
+                  <!-- Round Corner   -->
+                 <label for="shohel-scroll-to-top-round-corner"><?php echo esc_attr(__('Round Corner')); ?></label>
+                 <label class="radios">
+                    <input type="radio" name="shohel-scroll-to-top-round-corner" id="shohel-scroll-to-top-round-corner-yes" value="true" <?php if(get_option('shohel-scroll-to-top-round-corner')== 'true'){echo 'checked="checked"';} ?>><span>No</span>
+                 </label>
+                 <label class="radios">
+                    <input type="radio" name="shohel-scroll-to-top-round-corner" id="shohel-scroll-to-top-round-corner-no" value="true" <?php if(get_option('shohel-scroll-to-top-round-corner')== 'false') {echo 'checked="checked"';} ?>><span>Yes</span>
+                 </label>
+
+
+
+                 <input type="hidden" name="action" value="update">
+                 <input type="hidden" name="page_options" value="shohel-scroll-to-top-color, shohel-scroll-to-top-hover-color, shohel-scroll-to-top-button-position">
+                 <input type="button" value="<?php _e('Save Changes', 'shohel-scroll-to-top'); ?>" class="button button-primary" id="shohel_scroll_to_top_save_button">
               </form>
         </div>
-        <div class="shohel_scroll_to_top_sidebar"></div>
+        <div class="shohel_scroll_to_top_sidebar">
+            <div class="shohel_scroll_to_top_sidebar_area">
+                <h2><?php print esc_attr('Plugin Information') ?></h2>
+                <p><?php print esc_attr('This plugin is developed by Shohel Rana. You can find more plugins on the WordPress Plugin Directory.') ?></p>
+                <p><?php print esc_attr('If you have any questions or suggestions, please contact me at:') ?></p>
+                <a href="https://shohelrana.top" target="_blank">shohelrana.top</a>
+            </div>
+        </div>
       </div>
 
 
