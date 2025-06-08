@@ -74,7 +74,7 @@ function shohel_scroll_to_top_options_page() {
     ?>
 
       <div class="shohel_scroll_to_top_main">
-        <div class="shohel_scroll_to_top_body_area">
+        <div class="shohel_scroll_to_top_body_area  sohel_scroll">
            <h2 id="title_area"><?php print esc_attr('Scroll To Top Customizer') ?></h2>
               <p><?php print esc_attr('This plugin adds a scroll to top button on your WordPress site. You can customize the background color, hover color, and border radius of the button.') ?></p>
               <form action="options.php" method="post">
@@ -112,7 +112,7 @@ function shohel_scroll_to_top_options_page() {
                  <input type="button" value="<?php _e('Save Changes', 'shohel-scroll-to-top'); ?>" class="button button-primary" id="shohel_scroll_to_top_save_button">
               </form>
         </div>
-        <div class="shohel_scroll_to_top_sidebar">
+        <div class="shohel_scroll_to_top_sidebar sohel_scroll">
             <div class="shohel_scroll_to_top_sidebar_area">
                 <h2><?php print esc_attr('Plugin Information') ?></h2>
                 <p><?php print esc_attr('This plugin is developed by Shohel Rana. You can find more plugins on the WordPress Plugin Directory.') ?></p>

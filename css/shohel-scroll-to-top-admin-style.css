@@ -1,18 +1,23 @@
 .shohel_scroll_to_top_main{
     display: flex;
-    flex-direction: row;
-    margin: 20px;
-
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-top: 25px;
+}
+.sohel_scroll{
+    background: #fff;
+    padding: 20px 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 .shohel_scroll_to_top_body_area{
-    width: 50%;
-    position: relative;
-    background: #f9f9f9;
-    margin: 0 20px 0 0;
+    flex-basis: 70%;
+    margin-right: 5%;
 }
 .shohel_scroll_to_top_sidebar{
-    width: 25%;
-    position: relative;
+    flex-basis: 25%;
 
 }
 .shohel_scroll_to_top_sidebar{
