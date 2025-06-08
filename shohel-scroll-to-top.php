@@ -67,7 +67,16 @@ function shohel_scroll_to_top_options_page() {
     ?>
 
       <div class="shohel_scroll_to_top_main">
-        
+        <div class="shohel_scroll_to_top_body_area">
+           <h2 id="title_area"><?php print esc_attr('Scroll To Top Customizer') ?></h2>
+              <p><?php print esc_attr('This plugin adds a scroll to top button on your WordPress site. You can customize the background color, hover color, and border radius of the button.') ?></p>
+              <form action="options.php" method="post">
+                <?php wp_nonce_field('update-options');?>
+
+                <!-- Primary Color  -->
+              </form>
+        </div>
+        <div class="shohel_scroll_to_top_sidebar"></div>
       </div>
 
 
