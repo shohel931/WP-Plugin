@@ -66,6 +66,9 @@ add_action('admin_menu', 'shohel_scroll_to_top_add_admin_menu');
 function shohel_scroll_to_top_options_page() {
     ?>
 
+      <div class="shohel_scroll_to_top_main">
+        
+      </div>
 
 
 
