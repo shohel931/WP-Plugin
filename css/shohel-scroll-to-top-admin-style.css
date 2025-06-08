@@ -20,7 +20,12 @@
     flex-basis: 25%;
 
 }
-.shohel_scroll_to_top_sidebar{
-    width: 40%;
-    background:  #f9f9f9;
+.shohel_scroll_to_top_body_area h2#title_area{
+  display: block;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px;
+  padding-left: 0;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
